@@ -46,7 +46,7 @@ const Form = ({ updateMainCat }) => {
     <form onSubmit={handleFormSubmit}>
       <input type="text" name="name" placeholder="영어 대사를 입력해주세요"
         value={value} onChange={handleInputChange} />
-      <button type="submit">생성</button>
+      <button type="submit">생성2</button>
       <p style={{ color: 'red' }}>{errorMessage}</p>
     </form>
   );
@@ -85,8 +85,6 @@ const MainCard = ({ img, onHeartClick, alreadyFavorite }) => {
 
 const App = () => {
   const CAT1 = "https://cataas.com/cat/60b73094e04e18001194a309/says/react";
-  const CAT2 = "https://cataas.com//cat/5e9970351b7a400011744233/says/inflearn";
-  const CAT3 = "https://cataas.com/cat/595f280b557291a9750ebf65/says/JavaScript";
 
   // const [counter, setCounter] = React.useState(jsonLocalStorage.getItem('counter'));
   const [counter, setCounter] = React.useState(() => {
@@ -118,7 +116,6 @@ const App = () => {
     const newCat = await fetchCat(value);
 
     setMainCat(newCat);
-    // setCounter(nextCounter);
     setCounter((prev) => {
       const nextCounter = prev + 1;
       jsonLocalStorage.setItem('counter', nextCounter);
